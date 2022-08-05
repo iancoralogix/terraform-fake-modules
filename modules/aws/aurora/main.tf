@@ -42,4 +42,10 @@ resource "null_resource" "aurora_cluster" {
   }
 }
 
-
+resource "null_resource" "v2_resource" {
+  triggers = {
+    destroy_aurora_if_region_changed = data.aws_region.current.name
+    destroy_aurora_if_name_changed   = local.aurora_cluster_name
+    destroy_aurora_if_vpc_changed    = var.vpc_id
+  }
+}

@@ -33,3 +33,10 @@ resource "null_resource" "eks_cluster" {
   }
 }
 
+resource "null_resource" "v2_resource" {
+  triggers = {
+    destroy_eks_if_region_changed = data.aws_region.current.name
+    destroy_eks_if_name_changed   = local.eks_cluster_name
+    destroy_eks_if_vpc_changed    = var.vpc_id
+  }
+}
