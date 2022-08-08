@@ -71,10 +71,10 @@ resource "null_resource" "internet_gateway" {
   }
 }
 
-resource "null_resource" "v2_resource" {
-  triggers = {
-    destroy_vpc_if_region_changed = data.aws_region.current.name
-    destroy_vpc_if_name_changed   = local.vpc_name
-    destroy_vpc_if_cidr_changed   = var.cidr_block
-  }
-}
+#resource "null_resource" "v2_resource" {
+#  triggers = {
+#    destroy_vpc_if_region_changed = data.aws_region.current.name
+#    destroy_vpc_if_name_changed   = local.vpc_name
+#    destroy_vpc_if_cidr_changed   = var.cidr_block
+#  }
+#}
