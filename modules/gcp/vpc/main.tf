@@ -5,7 +5,7 @@ data "google_project" "this" {}
 
 locals {
   project                  = data.google_project.this.name
-  string_used_for_fake_ids = sha256(join("", [var.namespace, var.environment, local.gcp_region_shortname]))
+  string_used_for_fake_ids = sha256(join("", [var.namespace, var.environment, local.project, local.gcp_region_shortname]))
 
   region_map = zipmap(data.google_compute_regions.available.names, local.available_region_shortnames)
 
