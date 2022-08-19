@@ -6,6 +6,10 @@ variable "environment" {
   type = string
 }
 
+variable "region" {
+  type = string
+}
+
 variable "subnet_count" {
   type    = number
   default = 4
@@ -20,4 +24,3 @@ variable "cidr_block" {
   type    = string
   default = "10.0.0.0/16"
 }
-
