@@ -9,11 +9,11 @@ output "gcp_vpc" {
     #    region_map                  = local.region_map
     #    available_regions           = data.google_compute_regions.available.names
     #    available_region_shortnames = local.available_region_shortnames
+    #    subnets            = local.subnets
 
     vpc                = local.vpc
     subnet_regions     = local.subnet_regions
     subnet_cidr_blocks = local.subnet_cidr_blocks
-    subnets            = local.subnets
     tags               = var.tags
   }
 }
