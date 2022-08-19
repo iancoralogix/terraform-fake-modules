@@ -1,4 +1,4 @@
-output "this" {
+output "gcp_vpc" {
   value = {
 
     ## DEBUG outputs, mostly for us GCP newbies.
@@ -14,6 +14,7 @@ output "this" {
     subnet_regions     = local.subnet_regions
     subnet_cidr_blocks = local.subnet_cidr_blocks
     subnets            = local.subnets
+    tags               = var.tags
   }
 }
 
