@@ -37,3 +37,7 @@ output "environment" {
 output "namespace" {
   value = var.namespace
 }
+
+output "tags" {
+  value = var.tags
+}

@@ -49,3 +49,7 @@ output "engine_version" {
 output "port" {
   value = local.port
 }
+
+output "tags" {
+  value = var.tags
+}

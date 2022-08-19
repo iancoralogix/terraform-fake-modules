@@ -37,3 +37,7 @@ output "namespace" {
 output "vpc_id" {
   value = var.vpc_id
 }
+
+output "tags" {
+  value = var.tags
+}
