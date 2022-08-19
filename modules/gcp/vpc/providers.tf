@@ -8,3 +8,7 @@ terraform {
     }
   }
 }
+
+provider "gcp" {
+  project = var.project
+}
