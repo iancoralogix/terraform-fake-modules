@@ -9,6 +9,6 @@ terraform {
   }
 }
 
-provider "gcp" {
+provider "google" {
   project = var.project
 }
