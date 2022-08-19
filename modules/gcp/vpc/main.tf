@@ -1,7 +1,14 @@
-data "google_compute_regions" "available" {}
+data "google_compute_regions" "available" {
+  project = var.project_id
+}
+
+data "google_project" "this" {
+  project_id = var.project_id
+}
+
 data "google_client_config" "current" {}
+
 data "google_client_openid_userinfo" "this" {}
-data "google_project" "this" {}
 
 locals {
   project                  = data.google_project.this.name
