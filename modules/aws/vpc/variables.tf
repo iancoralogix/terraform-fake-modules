@@ -1,9 +1,11 @@
 variable "namespace" {
-  type = string
+  type    = string
+  default = "grunty"
 }
 
 variable "environment" {
-  type = string
+  type    = string
+  default = "development"
 }
 
 variable "subnet_count" {

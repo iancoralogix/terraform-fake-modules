@@ -1,14 +1,17 @@
-variable "namespace" {
-  type = string
-}
-
-variable "environment" {
-  type = string
-}
-
 variable "vpc_id" {
   type = string
 }
+
+variable "namespace" {
+  type    = string
+  default = "grunty"
+}
+
+variable "environment" {
+  type    = string
+  default = "development"
+}
+
 
 variable "engine_name" {
   type    = string
