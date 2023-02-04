@@ -4,13 +4,14 @@
 
 For a fake AWS VPC:
 ```
-source = "git@github.com:iangrunt/terraform-fake-modules.git//modules/aws/vpc?ref=main"                                                                                          
+source = "git@github.com:iangrunt/terraform-fake-modules.git//modules/aws/vpc?ref=main"
+
 ```
 
 For a fake EKS cluster:
 ```
 source = "git@github.com:iangrunt/terraform-fake-modules.git//modules/aws/eks?ref=main"
-                                                           ```                                   
+
 ```
 
 For a fake GCP VPC:
