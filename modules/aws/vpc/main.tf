@@ -11,7 +11,6 @@ locals {
   vpc_name = join("-", [var.namespace, var.environment, local.aws_region_shortname, "vpc"])
   vpc_id   = join("-", ["vpc", substr(local.string_used_for_fake_ids, 0, 7)])
 
-
   available_az_count = length(data.aws_availability_zones.available.names)
   az_count           = local.available_az_count > var.max_az_count ? var.max_az_count : local.available_az_count
 
