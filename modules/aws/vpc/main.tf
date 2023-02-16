@@ -61,13 +61,10 @@ resource "null_resource" "private_subnets" {
 
   triggers = {
     destroy_vpc_if_region_changed = data.aws_region.current.name
-    destroy_vpc_if_name_changed   = local.vpc_name
-    destroy_vpc_if_cidr_changed   = var.cidr_block
 
-    destroy_subnets_if_private_subnet_count_changed = local.az_count
-    destroy_subnets_if_subnet_ids_changed           = local.private_subnet_ids[count.index]
-    destroy_subnets_if_subnet_names_changed         = local.subnet_names[local.private_subnet_ids[count.index]]
-    destroy_subnets_if_subnet_cidr_changed          = local.subnet_cidr_blocks[local.subnet_names[local.private_subnet_ids[count.index]]]
+    destroy_subnets_if_subnet_ids_changed   = local.private_subnet_ids[count.index]
+    destroy_subnets_if_subnet_names_changed = local.subnet_names[local.private_subnet_ids[count.index]]
+    destroy_subnets_if_subnet_cidr_changed  = local.subnet_cidr_blocks[local.subnet_names[local.private_subnet_ids[count.index]]]
   }
 }
 
@@ -76,13 +73,10 @@ resource "null_resource" "public_subnets" {
 
   triggers = {
     destroy_vpc_if_region_changed = data.aws_region.current.name
-    destroy_vpc_if_name_changed   = local.vpc_name
-    destroy_vpc_if_cidr_changed   = var.cidr_block
 
-    destroy_subnets_if_public_subnet_count_changed = local.az_count
-    destroy_subnets_if_subnet_ids_changed          = local.public_subnet_ids[count.index]
-    destroy_subnets_if_subnet_names_changed        = local.subnet_names[local.public_subnet_ids[count.index]]
-    destroy_subnets_if_subnet_cidr_changed         = local.subnet_cidr_blocks[local.subnet_names[local.public_subnet_ids[count.index]]]
+    destroy_subnets_if_subnet_ids_changed   = local.public_subnet_ids[count.index]
+    destroy_subnets_if_subnet_names_changed = local.subnet_names[local.public_subnet_ids[count.index]]
+    destroy_subnets_if_subnet_cidr_changed  = local.subnet_cidr_blocks[local.subnet_names[local.public_subnet_ids[count.index]]]
   }
 }
 
