@@ -8,14 +8,6 @@
 # .tfplan files
 *.tfplan
 
-# terraform locks
-.terraform.lock.hcl
-
-.git/
-
-# go tests
-tests/go.*
-
 # vim
 *.swp
 *.swo
