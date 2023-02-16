@@ -1,6 +1,6 @@
 variable "namespace" {
   type    = string
-  default = "grunty"
+  default = "gruntwork"
 }
 
 variable "environment" {
