@@ -8,6 +8,8 @@
 # .tfplan files
 *.tfplan
 
+**/.terraform.lock.hcl
+
 # vim
 *.swp
 *.swo

@@ -39,5 +39,5 @@ output "namespace" {
 }
 
 output "tags" {
-  value = var.tags
+  value = local.tags
 }
