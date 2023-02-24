@@ -1,6 +1,6 @@
-# Terraform Fake Modules for Amazon Web Services
+# Terraform Fake Modules for Amazon Web Services (AWS)
 
-A collection of fake AWS Terraform modules for example purposes when you need to demonstrate module behavior with tools like Terragrunt. Don't use these modules for testing, stubbing, or production. See [Terratest](https://terratest.gruntwork.io/) for how to effectively test Terraform.
+A collection of fake AWS Terraform modules for example purposes when you need to demonstrate module behavior with tools like [Terragrunt](https://terragrunt.gruntwork.io/). See [Terratest](https://terratest.gruntwork.io/) for how to effectively test Terraform.
 
 ### Requirements
 
